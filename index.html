@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/weather-icons.min.css">
+    <link rel="stylesheet" href="src/css/weather-icons-wind.min.css">
+    <title>Weather app</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="top-bar">
+          <div class="city-wrapper">
+            <div id="city"></div>
+          </div>
+          <div>
+            <input id="user-input" placeholder="Search your city" onkeypress="handle(event)"/>
+            <button class="enter-button" onclick="updateByCity()">Enter</button>
+          </div>
+        </div>
+        <div id="wrapper2">
+          Weather App
+        </div>
+        <div id="wrapper" class="wrapper">
+          <div class="content">
+            <div class="content-top">
+              <div class="icon-box"><i id="weather-icon" class=""></i></div>
+              <div id="temp">--</div>
+              <div class="button-group">
+                <button class="enter-button" id="to-f" onclick="changeToF()">°F</button>
+                <button class="enter-button" id="to-c" onclick="changeToC()" disabled>°C</button>
+                <button class="enter-button" id="to-k" onclick="changeToK()">K</button>
+              </div>
+            </div>
+            <div><div id="weather">--</div></div>
+          </div>
+          <div class="content2">
+            <div class="content2-c">
+              <div class="content2-text">Pressure:</div>
+              <div id="pres">--</div>
+            </div>
+            <div class="content2-c">
+              <div class="content2-text">Humidity:</div>
+              <div id="humi">--</div>
+            </div>
+            <div class="content2-c">
+              <div class="content2-text">Wind speed:</div>
+              <div id="wind-speed">--</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="src/index.js"></script>
+  </body>
+</html>
